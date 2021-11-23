@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+* {
+  user-select: none;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #141414;
+  color: #e0e0e0;
+  text-shadow: 4px 4px 5px black;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__add-song {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app__input {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 2px;
+  color: inherit;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2em;
+}
+
+.app__input::placeholder {
+  text-decoration: underline;
+}
+
+.app__input--submit {
+  cursor: pointer;
+  text-align: start;
+}
+
+.song-tree {
+  margin-top: 15px;
+  padding: 2px;
+}
+
+.song-tree__artist {
+  margin-bottom: 15px;
+}
+
+.song-tree__caret {
+  cursor: pointer;
+  color: #d3d3d3;
+  font-size: 1.2rem;
+  padding-left: 2px;
+}
+
+.song-tree__caret::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.75em;
+}
+
+.song-tree__caret--down::before {
+  transform: rotate(90deg);
+}
+
+.song-tree__songs {
+  list-style-position: inside;
+  cursor: pointer;
+  display: none;
+  padding: 4px;
+}
+
+.song-tree__songs--active {
+  display: block;
+}
+
+.app__bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.app__player {
+  opacity: 0.5;
+  z-index: -5;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}

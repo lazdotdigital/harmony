@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="app__bg">
+        <video controls autoplay class="app__player"></video>
+      </div>
+
+      <form class="app__add-song">
+        <input class="app__input" type="text" placeholder="URL" />
+        <input class="app__input" type="text" placeholder="Title" />
+        <input class="app__input" type="text" placeholder="By" />
+        <input
+          class="app__input app__input--submit"
+          type="submit"
+          value="Add Song"
+        />
+      </form>
+
+      <ul class="song-tree"></ul>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
